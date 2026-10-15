@@ -1,0 +1,25 @@
+name = "promptnest"
+main = "src/index.js"
+compatibility_date = "2025-09-01"
+
+# Runs every 30 minutes. Each run advances the pipeline a few steps,
+# so one article is finished over several runs and quota is never wasted.
+[triggers]
+crons = ["*/30 * * * *"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "promptnest-db"
+database_id = "PASTE_YOUR_D1_DATABASE_ID_HERE"
+
+[vars]
+# Your public address, no trailing slash. Example: https://promptnest.pages.dev or https://promptnest.com
+SITE_URL = ""
+CONTACT_EMAIL = ""
+# Paste the content value from Google Search Console's "HTML tag" verification method
+GSC_VERIFICATION = ""
+
+# Secrets (set with: npx wrangler secret put NAME)
+#   GEMINI_API_KEY   required
+#   ADMIN_TOKEN      required, a long random password for /admin
+#   PEXELS_API_KEY   optional, free key for article photos
