@@ -7,10 +7,6 @@ compatibility_date = "2025-09-01"
 [triggers]
 crons = ["*/30 * * * *"]
 
-[[d1_databases]]
-binding = "DB"
-database_name = "promptnest-db"
-database_id = "PASTE_YOUR_D1_DATABASE_ID_HERE"
 
 [vars]
 # Your public address, no trailing slash. Example: https://promptnest.pages.dev or https://promptnest.com
