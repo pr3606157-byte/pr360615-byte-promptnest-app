@@ -1,5 +1,5 @@
 name = "promptnest"
-main = "src/index.js"
+main = "index.js"
 compatibility_date = "2025-09-01"
 
 # Runs every 30 minutes. Each run advances the pipeline a few steps,
